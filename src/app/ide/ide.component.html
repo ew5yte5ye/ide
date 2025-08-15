@@ -1,0 +1,13 @@
+<h1>Online IDE</h1>
+
+<nav>
+<button (click)="lang='php'">PHP</button>
+<button (click)="lang='javascript'">JavaScript</button>
+<button (click)="lang='python'">Python</button>
+</nav>
+
+<ng-container [ngSwitch]="lang">
+<app-php-editor *ngSwitchCase="'php'"></app-php-editor>
+<app-javascript-editor *ngSwitchCase="'javascript'"></app-javascript-editor>
+<app-python-editor *ngSwitchCase="'python'"></app-python-editor>
+</ng-container>

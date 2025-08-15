@@ -1,0 +1,10 @@
+<p>Python IDE</p>
+<textarea [(ngModel)]="code" rows="15" cols="100" placeholder="write your python code here"></textarea>
+<button (click)="runCode()">Execute</button>
+
+<h2>Output : </h2>
+{{output}}
+
+<div *ngIf="errorMessage" style="color: red;">
+  {{ errorMessage }}
+</div>
